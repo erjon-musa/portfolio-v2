@@ -16,6 +16,7 @@ const geistMono = localFont({
 
 // TODO: Please update the title and description with your personal information
 export const metadata: Metadata = {
+  metadataBase: new URL("https://erjonmusa.com"),
   title: "Erjon Musa | AI/ML Engineer",
   description: "Computer Engineering graduate from Queen's University specializing in computer vision, deep learning, and embedded AI systems.",
   icons: {

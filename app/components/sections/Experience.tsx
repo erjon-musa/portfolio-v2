@@ -94,6 +94,7 @@ export default function Experience() {
                         src={experience.logo}
                         alt={experience.company}
                         fill
+                        sizes="48px"
                         className="object-cover"
                       />
                     </div>

@@ -120,6 +120,7 @@ export default function Projects() {
                         src={project.image}
                         alt={project.title}
                         fill
+                        sizes="(min-width: 768px) 33vw, 50vw"
                         className="object-contain"
                       />
                     </div>
