@@ -6,7 +6,7 @@ export default function SnoutNetArchitecture() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         
         {/* Custom Model */}
-        <div className="p-5 rounded-xl bg-white/[0.04] border border-white/[0.1] flex flex-col items-center text-center group hover:bg-white/[0.06] transition-colors">
+        <div className="p-5 rounded-xl bg-white/[0.04] border border-white/[0.1] flex flex-col items-center text-center">
           <div className="w-12 h-12 rounded-full bg-cyan-500/20 flex items-center justify-center mb-4 border border-cyan-500/50">
             <svg className="w-6 h-6 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
@@ -22,7 +22,7 @@ export default function SnoutNetArchitecture() {
         </div>
 
         {/* AlexNet */}
-        <div className="p-5 rounded-xl bg-white/[0.04] border border-white/[0.1] flex flex-col items-center text-center group hover:bg-white/[0.06] transition-colors">
+        <div className="p-5 rounded-xl bg-white/[0.04] border border-white/[0.1] flex flex-col items-center text-center">
           <div className="w-12 h-12 rounded-full bg-yellow-500/20 flex items-center justify-center mb-4 border border-yellow-500/50">
             <svg className="w-6 h-6 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />

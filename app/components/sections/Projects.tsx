@@ -134,7 +134,7 @@ export default function Projects() {
                     {project.period}
                   </p>
 
-                  <p className="text-base text-gray-200 mb-4 line-clamp-2">
+                  <p className="text-base text-gray-200 mb-4">
                     {project.description}
                   </p>
 

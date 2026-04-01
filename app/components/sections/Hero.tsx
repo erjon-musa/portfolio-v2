@@ -43,7 +43,7 @@ export default function Hero() {
             aria-hidden={isPastHero}
             className={`
               flex gap-4 sm:gap-8 flex-wrap justify-center
-              transition-all duration-500 ease-out
+              transition-opacity duration-300 ease-out
               ${isPastHero ? 'opacity-0 pointer-events-none' : 'opacity-100'}
             `}
           >

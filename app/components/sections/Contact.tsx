@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useRef } from "react"
+import { useState, useRef, useEffect } from "react"
 import Image from "next/image"
 import AnimatedText from "../common/AnimatedText"
 import GradientBackground from "../common/GradientBackground"
@@ -14,6 +14,7 @@ export default function Contact() {
   const [formStatus, setFormStatus] = useState<FormStatus>('idle')
   const [errorMessage, setErrorMessage] = useState('')
   const formRef = useRef<HTMLFormElement>(null)
+  const formContainerRef = useRef<HTMLDivElement>(null)
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -57,6 +58,16 @@ export default function Contact() {
     }
   }
 
+  // Scroll form into view on mobile when opened
+  useEffect(() => {
+    if (!isFormOpen) return
+    // Short delay lets the DOM render the element before we scroll
+    const timer = setTimeout(() => {
+      formContainerRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
+    }, 150)
+    return () => clearTimeout(timer)
+  }, [isFormOpen])
+
   // Separate email from other links
   const nonEmailLinks = contactLinks.filter(link => link.name !== "Email")
 
@@ -85,43 +96,6 @@ export default function Contact() {
 
         {/* GitHub & LinkedIn cards */}
         <AnimatedText className="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full justify-center items-center">
-          {nonEmailLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              target={link.external ? "_blank" : undefined}
-              rel={link.external ? "noopener noreferrer" : undefined}
-              aria-label={`Contact via ${link.name}`}
-              className="
-                group flex flex-col items-center gap-3
-                w-40 py-6 px-4
-                rounded-2xl
-                bg-white/[0.03] backdrop-blur-sm
-                border border-white/[0.08]
-                transition-all duration-300
-                hover:bg-white/[0.07]
-                hover:-translate-y-2
-                hover:shadow-[0_20px_40px_rgba(0,0,0,0.3)]
-                hover:border-white/[0.15]
-              "
-            >
-              <Image
-                src={link.icon}
-                alt={link.name}
-                width={36}
-                height={36}
-                className={`
-                  transition-transform duration-300
-                  group-hover:scale-110
-                  ${link.invertIcon ? 'invert' : ''}
-                `}
-              />
-              <span className="text-base font-medium text-foreground/80 group-hover:text-foreground transition-colors">
-                {link.name}
-              </span>
-            </a>
-          ))}
-
           {/* Email card — toggles the form */}
           <button
             onClick={() => {
@@ -170,25 +144,62 @@ export default function Contact() {
               <path d="M19 9l-7 7-7-7" />
             </motion.svg>
           </button>
+
+          {nonEmailLinks.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              target={link.external ? "_blank" : undefined}
+              rel={link.external ? "noopener noreferrer" : undefined}
+              aria-label={`Contact via ${link.name}`}
+              className="
+                group flex flex-col items-center gap-3
+                w-40 py-6 px-4
+                rounded-2xl
+                bg-white/[0.03] backdrop-blur-sm
+                border border-white/[0.08]
+                transition-all duration-300
+                hover:bg-white/[0.07]
+                hover:-translate-y-2
+                hover:shadow-[0_20px_40px_rgba(0,0,0,0.3)]
+                hover:border-white/[0.15]
+              "
+            >
+              <Image
+                src={link.icon}
+                alt={link.name}
+                width={36}
+                height={36}
+                className={`
+                  transition-transform duration-300
+                  group-hover:scale-110
+                  ${link.invertIcon ? 'invert' : ''}
+                `}
+              />
+              <span className="text-base font-medium text-foreground/80 group-hover:text-foreground transition-colors">
+                {link.name}
+              </span>
+            </a>
+          ))}
         </AnimatedText>
 
         {/* Expandable contact form */}
         <AnimatePresence>
           {isFormOpen && (
             <motion.div
-              initial={{ height: 0, opacity: 0, y: -10 }}
-              animate={{ height: 'auto', opacity: 1, y: 0 }}
-              exit={{ height: 0, opacity: 0, y: -10 }}
+              ref={formContainerRef}
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: 'auto', opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
               transition={{
-                height: { duration: 0.4, ease: [0.25, 0.1, 0.25, 1] },
-                opacity: { duration: 0.3, delay: 0.1 },
-                y: { duration: 0.3, delay: 0.1 },
+                height: { duration: 0.3, ease: [0.25, 0.1, 0.25, 1] },
+                opacity: { duration: 0.2 },
               }}
               className="w-full overflow-hidden"
             >
               <div className="
                 rounded-2xl
-                bg-white/[0.03] backdrop-blur-md
+                bg-white/[0.03] backdrop-blur-sm
                 border border-white/[0.08]
                 p-6 sm:p-8
               ">

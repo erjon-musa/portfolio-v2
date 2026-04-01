@@ -30,10 +30,10 @@ export default function Navbar() {
         fixed top-0 left-0 right-0 z-40
         bg-black/95 backdrop-blur-md
         border-b border-white/[0.1]
-        transition-all duration-500 ease-out
+        transition-opacity duration-300 ease-out
         ${isPastHero
-          ? 'opacity-100 translate-y-0 pointer-events-auto'
-          : 'opacity-0 -translate-y-full pointer-events-none'
+          ? 'opacity-100 pointer-events-auto'
+          : 'opacity-0 pointer-events-none'
         }
       `}
     >

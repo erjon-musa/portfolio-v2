@@ -88,7 +88,7 @@ const photos: Photo[] = [
     image: "/gallery/optimized/PalmSprings2022.jpeg",
     blurDataURL: "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAMABADASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAABAX/xAAgEAACAQMEAwAAAAAAAAAAAAABAgMABBEFEyFhMUFC/8QAFAEBAAAAAAAAAAAAAAAAAAAAAf/EABgRAAIDAAAAAAAAAAAAAAAAAAACARNR/9oADAMBAAIRAxEAPwCuDAW+OR3R9RuYbW1coE3DwM+u6NK5SUoPGKj6zKxATOFzRYwyq4f/2Q==",
     date: "2022",
-    location: "Palm Springs",
+    location: "San Jacinto, California",
     description: "Desert landscape"
   },
   {

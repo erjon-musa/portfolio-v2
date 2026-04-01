@@ -27,7 +27,7 @@ const experiences: Experience[] = [
     period: "September 2024 - August 2025",
     logo: "/companyicon/ontario/ontario_logo.jpg",
     skills: ["JavaScript", "C#", "Figma", "Power Platform", "Azure DevOps"],
-    description: "Built a portal on Microsoft Power Platform and Dynamics 365, replacing old PDF workflows with a proper web app. Led a team of 3 co-op students, ran Agile sprints, and made sure everything met Ontario Design Standards for accessibility."
+    description: "Built a portal on Microsoft Power Platform and Dynamics 365, replacing old PDF workflows with a proper web app. Led a team of 3 co-op students, ran Agile sprints, and ensured all digital interfaces and user workflows met rigorous Ontario Design Standards for accessibility."
   },
 ];
 

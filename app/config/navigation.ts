@@ -11,11 +11,11 @@ export const navItems = [
 
 export const contactLinks = [
   {
-    name: "GitHub",
-    href: "https://github.com/erjon-musa",
-    icon: "/icons/github.svg",
-    invertIcon: false,
-    external: true,
+    name: "Email",
+    href: "mailto:erjonmusa@outlook.com",
+    icon: "/icons/mail.svg",
+    invertIcon: true,
+    external: false,
   },
   {
     name: "LinkedIn",
@@ -25,10 +25,10 @@ export const contactLinks = [
     external: true,
   },
   {
-    name: "Email",
-    href: "mailto:erjonmusa@outlook.com",
-    icon: "/icons/mail.svg",
-    invertIcon: true,
-    external: false,
+    name: "GitHub",
+    href: "https://github.com/erjon-musa",
+    icon: "/icons/github.svg",
+    invertIcon: false,
+    external: true,
   },
 ]

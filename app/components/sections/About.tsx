@@ -20,7 +20,7 @@ export default function About() {
                 Hey, I&apos;m Erjon! I&apos;ve always been driven by a deep curiosity for how things work under the hood, a passion that naturally led me to study Computer Engineering at Queen&apos;s University. I love figuring out complex systems and turning that knowledge into something people can actually use.
               </p>
               <p className="text-lg text-foreground/80 leading-relaxed">
-                One project I&apos;m really proud of is MyEyes, an assistive AI wearable I built to help visually impaired users navigate the world around them.{' '}
+                One project I&apos;m really proud of is{' '}
                 <a
                   href="#projects"
                   onClick={(e) => {
@@ -29,17 +29,18 @@ export default function About() {
                   }}
                   className="inline-block underline font-semibold text-accent-primary transition-transform duration-300 hover:scale-[1.02]"
                 >
-                  Check it out below
+                  MyEyes
                 </a>
+                , an assistive AI wearable I built to help visually impaired users navigate the world around them.
               </p>
             </div>
           </AnimatedText>
 
           <AnimatedText>
             <div className="space-y-4">
-              <h2 className="text-2xl font-semibold">What I Am Looking For</h2>
+              <h2 className="text-2xl font-semibold">My Next Challenge</h2>
               <p className="text-lg text-foreground/80 leading-relaxed">
-                I&apos;m looking for new-grad software engineering roles where I can make a real impact. I care most about solving meaningful problems alongside a team I can learn from.
+                I&apos;m seeking new-grad software engineering opportunities where I can tackle complex technical challenges and deliver tangible value. With a background spanning full-stack development, systems engineering, and machine learning, I&apos;m passionate about building robust, user-centric applications and collaborating with teams that push the boundaries of what&apos;s possible.
               </p>
             </div>
           </AnimatedText>

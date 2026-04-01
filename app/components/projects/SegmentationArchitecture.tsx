@@ -18,7 +18,7 @@ export default function SegmentationArchitecture() {
         <div className="
           p-5 rounded-xl
           bg-white/[0.04] border border-white/[0.1]
-          hover:bg-white/[0.06] hover:border-purple-500/50 transition-all duration-300
+          transition-all duration-300
         ">
           <div className="flex justify-between items-start mb-4">
             <h4 className="font-bold text-white text-base">MobileNetV3-Small</h4>
@@ -56,7 +56,7 @@ export default function SegmentationArchitecture() {
       <div className="
         p-5 rounded-xl
         bg-white/[0.04] border border-white/[0.1]
-        hover:bg-white/[0.06] hover:border-blue-500/50 transition-all duration-300
+        transition-all duration-300
         flex items-center justify-between
       ">
         <div>
@@ -78,7 +78,7 @@ export default function SegmentationArchitecture() {
       <div className="
         p-5 rounded-xl
         bg-white/[0.04] border border-white/[0.1]
-        hover:bg-white/[0.06] hover:border-rose-500/50 transition-all duration-300
+        transition-all duration-300
         flex items-center justify-between
       ">
         <div>

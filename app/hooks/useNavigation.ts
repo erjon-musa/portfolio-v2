@@ -18,7 +18,12 @@ export function useNavigation() {
         const heroEl = document.getElementById("home")
         if (heroEl) {
           const heroBottom = heroEl.offsetTop + heroEl.clientHeight
-          setIsPastHero(window.scrollY > heroBottom - 300)
+          const threshold = heroBottom - 300
+          setIsPastHero(prev => {
+            if (!prev && window.scrollY > threshold + 50) return true
+            if (prev && window.scrollY < threshold - 50) return false
+            return prev
+          })
         }
 
         const sections = document.querySelectorAll("section[id]")
